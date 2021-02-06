@@ -21,7 +21,7 @@ namespace municipalities_report
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            chart1.Titles.Add("Tipos de municipios");
         }
 
         private void button1_Click(object sender, EventArgs e)
