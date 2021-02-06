@@ -18,3 +18,13 @@ C:\Users\Ferna\Downloads\municipality-report\municipalities-report\obj\Debug\mun
 C:\Users\Ferna\Downloads\municipality-report\municipalities-report\obj\Debug\municipalities-report.csproj.CoreCompileInputs.cache
 C:\Users\Ferna\Downloads\municipality-report\municipalities-report\obj\Debug\municipalities-report.exe
 C:\Users\Ferna\Downloads\municipality-report\municipalities-report\obj\Debug\municipalities-report.pdb
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\bin\Debug\municipalities-report.exe.config
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\bin\Debug\municipalities-report.exe
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\bin\Debug\municipalities-report.pdb
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities-report.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities_report.Statistics.resources
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities_report.Properties.Resources.resources
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities-report.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities-report.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities-report.exe
+C:\Users\usuario\Desktop\Proyecto integrador\municipality-report\municipalities-report\obj\Debug\municipalities-report.pdb
