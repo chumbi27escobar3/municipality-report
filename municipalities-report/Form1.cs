@@ -40,7 +40,6 @@ namespace municipalities_report
                                StringSplitOptions.RemoveEmptyEntries);
                         data.Items.Add(new ListViewItem(items));
                     }
-                   
                 }
                 catch (SecurityException ex)
                 {
