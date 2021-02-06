@@ -21,19 +21,6 @@ namespace municipalities_report
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            data.View = View.Details;
-            data.Columns.Add("REGION");
-            data.Columns.Add("CODIGO DANE");
-            data.Columns.Add("DEPARTAMENTO");
-            data.Columns.Add("Total Hours");
-            data.Columns.Add("MUNICIPIO");
-
-            // Auto-size the columns
-            for (int i = 0; i < data.Columns.Count; i++)
-            {
-                data.Columns[i].Width = -2;
-            }
-
 
         }
 
@@ -45,7 +32,32 @@ namespace municipalities_report
                 {
                     var sr = new StreamReader(openFileDialog1.FileName);
                     //file.Text = openFileDialog1.FileName;
-                    file.Text = sr.ReadToEnd();
+                    String line1 = sr.ReadLine();
+                    char deter = ',';
+                    String[] line2 = line1.Split(deter);
+                    String codDep = line2[0], demp = line2[1], codMuni = line2[2], nameDep = line2[3], nameMuni = line2[4], tipoMIA = line2[5];
+                    data = new ListView();
+                    data.Items.Add(codDep);
+                    data.Items.Add(demp);
+                    data.Items.Add(codMuni);
+                    data.Items.Add(nameDep);
+                    data.Items.Add(nameMuni);
+                    data.Items.Add(tipoMIA);
+                    String linee = sr.ReadLine();
+                    while (!String.IsNullOrEmpty(linee))
+                    {
+                        String[] line3 = linee.Split(deter);
+                        codDep = line3[0];
+                        demp = line3[1];
+                        codMuni = line3[2];
+                        nameDep = line3[3];
+                        nameMuni = line3[4];
+                        tipoMIA = line3[5]; 
+                    }
+
+                    data.Items.Add(codDep);
+                    //file.Text = sr.ReadToEnd();
+
                 }
                 catch (SecurityException ex)
                 {
