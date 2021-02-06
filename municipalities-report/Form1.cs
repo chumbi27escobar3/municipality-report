@@ -31,33 +31,16 @@ namespace municipalities_report
                 try
                 {
                     var sr = new StreamReader(openFileDialog1.FileName);
-                    //file.Text = openFileDialog1.FileName;
-                    String line1 = sr.ReadLine();
-                    char deter = ',';
-                    String[] line2 = line1.Split(deter);
-                    String codDep = line2[0], demp = line2[1], codMuni = line2[2], nameDep = line2[3], nameMuni = line2[4], tipoMIA = line2[5];
-                    data = new ListView();
-                    data.Items.Add(codDep);
-                    data.Items.Add(demp);
-                    data.Items.Add(codMuni);
-                    data.Items.Add(nameDep);
-                    data.Items.Add(nameMuni);
-                    data.Items.Add(tipoMIA);
-                    String linee = sr.ReadLine();
-                    while (!String.IsNullOrEmpty(linee))
+                                    
+                    List<string> lista = File.ReadAllLines(openFileDialog1.FileName).ToList();
+                    
+                    foreach (string d in lista)
                     {
-                        String[] line3 = linee.Split(deter);
-                        codDep = line3[0];
-                        demp = line3[1];
-                        codMuni = line3[2];
-                        nameDep = line3[3];
-                        nameMuni = line3[4];
-                        tipoMIA = line3[5]; 
+                        string[] items = d.Split(new char[] { ',' },
+                               StringSplitOptions.RemoveEmptyEntries);
+                        data.Items.Add(new ListViewItem(items));
                     }
-
-                    data.Items.Add(codDep);
-                    //file.Text = sr.ReadToEnd();
-
+                   
                 }
                 catch (SecurityException ex)
                 {
@@ -73,6 +56,11 @@ namespace municipalities_report
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void data_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -86,6 +86,27 @@ namespace municipalities_report
             this.data.TabIndex = 2;
             this.data.UseCompatibleStateImageBehavior = false;
             this.data.View = System.Windows.Forms.View.Details;
+            this.data.SelectedIndexChanged += new System.EventHandler(this.data_SelectedIndexChanged);
+            // 
+            // codigoDepartamento
+            // 
+            this.codigoDepartamento.Text = "Codigo Departamento";
+            // 
+            // codigoMunicipio
+            // 
+            this.codigoMunicipio.Text = "Codigo Municipio";
+            // 
+            // nombreDepartamento
+            // 
+            this.nombreDepartamento.Text = "Nombre Deparatamento";
+            // 
+            // nombreMunicipio
+            // 
+            this.nombreMunicipio.Text = "Nombre Municipio";
+            // 
+            // tipo
+            // 
+            this.tipo.Text = "Tipo";
             // 
             // alphabet
             // 
