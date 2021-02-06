@@ -33,12 +33,12 @@ namespace municipalities_report
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.file = new System.Windows.Forms.Label();
             this.data = new System.Windows.Forms.ListView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.codigoDepartamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.codigoMunicipio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nombreDepartamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nombreMunicipio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.alphabet = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -81,20 +81,24 @@ namespace municipalities_report
             this.data.UseCompatibleStateImageBehavior = false;
             this.data.View = System.Windows.Forms.View.Details;
             // 
-            // comboBox1
+            // alphabet
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(514, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.alphabet.FormattingEnabled = true;
+            this.alphabet.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c"});
+            this.alphabet.Location = new System.Drawing.Point(216, 23);
+            this.alphabet.Name = "alphabet";
+            this.alphabet.Size = new System.Drawing.Size(121, 21);
+            this.alphabet.TabIndex = 3;
             // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.alphabet);
             this.Controls.Add(this.data);
             this.Controls.Add(this.file);
             this.Controls.Add(this.button1);
@@ -112,7 +116,7 @@ namespace municipalities_report
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label file;
         private System.Windows.Forms.ListView data;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox alphabet;
         private System.Windows.Forms.ColumnHeader codigoDepartamento;
         private System.Windows.Forms.ColumnHeader codigoMunicipio;
         private System.Windows.Forms.ColumnHeader nombreDepartamento;

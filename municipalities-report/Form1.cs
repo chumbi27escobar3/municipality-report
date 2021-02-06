@@ -21,6 +21,19 @@ namespace municipalities_report
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            data.View = View.Details;
+            data.Columns.Add("REGION");
+            data.Columns.Add("CODIGO DANE");
+            data.Columns.Add("DEPARTAMENTO");
+            data.Columns.Add("Total Hours");
+            data.Columns.Add("MUNICIPIO");
+
+            // Auto-size the columns
+            for (int i = 0; i < data.Columns.Count; i++)
+            {
+                data.Columns[i].Width = -2;
+            }
+
 
         }
 
