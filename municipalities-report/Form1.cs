@@ -31,9 +31,9 @@ namespace municipalities_report
                 try
                 {
                     var sr = new StreamReader(openFileDialog1.FileName);
-                                    
+
                     List<string> lista = File.ReadAllLines(openFileDialog1.FileName).ToList();
-                    
+
                     foreach (string d in lista)
                     {
                         string[] items = d.Split(new char[] { ',' },
@@ -45,7 +45,7 @@ namespace municipalities_report
                 {
                     MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
                     $"Details:\n\n{ex.StackTrace}");
-                }   
+                }
             }
         }
 
@@ -64,23 +64,22 @@ namespace municipalities_report
 
         }
 
-        private void getMunicipalityType(){
-            int cM = 0, cI=0, cA=0;
-            foreach (ListViewItem item in data.Items)
+        private void getMunicipalityType() {
+            int cM = 0, cI = 0, cA = 0;
+            /**foreach (ListViewItem item in data.Items)
             {
                 label1.Text = item.SubItems[4].Text;
-            }
+            }*/
             for (int i = 0; i < data.Items.Count; i++)
             {
                 var colCount = data.Items[1].SubItems[4].Text;
-                label1.Text = Convert.ToString(colCount);
                 if (data.Items[i].SubItems[4].Text.Equals("Municipio"))
                 {
                     cM++;
-                }if (data.Items[i].SubItems[4].Text.Equals("Isla"))
+                } if (data.Items[i].SubItems[4].Text.Equals("Isla"))
                 {
                     cI++;
-                }if (data.Items[i].SubItems[4].Text.Equals("Área no municipalizada"))
+                } if (data.Items[i].SubItems[4].Text.Equals("Área no municipalizada"))
                 {
                     cA++;
                 }
@@ -88,6 +87,28 @@ namespace municipalities_report
             chart1.Series["Series1"].Points.AddXY("Municipio", cM);
             chart1.Series["Series1"].Points.AddXY("Isla", cI);
             chart1.Series["Series1"].Points.AddXY("Área no municipalizada", cA);
+        }
+
+        private void getDepartament()
+        {
+            for (int i = 0; i < data.Items.Count; i++)
+            {
+                var colCount = data.Items[1].SubItems[2].Text;
+                if (data.Items[i].SubItems[2].Text.Equals("Municipio"))
+                {
+                }
+                if (data.Items[i].SubItems[2].Text.Equals("Isla"))
+                {
+                }
+                if (data.Items[i].SubItems[2].Text.Equals("Área no municipalizada"))
+                {
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string selected = this.alphabet.GetItemText(this.alphabet.SelectedItem);
         }
     }
 }

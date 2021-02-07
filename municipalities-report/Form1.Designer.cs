@@ -29,12 +29,11 @@ namespace municipalities_report
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.file = new System.Windows.Forms.Label();
             this.data = new System.Windows.Forms.ListView();
             this.codigoDepartamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.codigoMunicipio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -45,6 +44,7 @@ namespace municipalities_report
             this.button2 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,15 +62,6 @@ namespace municipalities_report
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // file
-            // 
-            this.file.AutoSize = true;
-            this.file.Location = new System.Drawing.Point(148, 26);
-            this.file.Name = "file";
-            this.file.Size = new System.Drawing.Size(35, 13);
-            this.file.TabIndex = 1;
-            this.file.Text = "label1";
             // 
             // data
             // 
@@ -139,7 +130,7 @@ namespace municipalities_report
             "x",
             "y",
             "z"});
-            this.alphabet.Location = new System.Drawing.Point(216, 23);
+            this.alphabet.Location = new System.Drawing.Point(109, 22);
             this.alphabet.Name = "alphabet";
             this.alphabet.Size = new System.Drawing.Size(121, 21);
             this.alphabet.TabIndex = 3;
@@ -156,17 +147,18 @@ namespace municipalities_report
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(382, 68);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(406, 380);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
@@ -180,17 +172,27 @@ namespace municipalities_report
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(236, 20);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Choose letter";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.alphabet);
             this.Controls.Add(this.data);
-            this.Controls.Add(this.file);
             this.Controls.Add(this.button1);
             this.Name = "Statistics";
             this.Text = "Statistics";
@@ -205,7 +207,6 @@ namespace municipalities_report
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label file;
         private System.Windows.Forms.ListView data;
         private System.Windows.Forms.ComboBox alphabet;
         private System.Windows.Forms.ColumnHeader codigoDepartamento;
@@ -216,6 +217,7 @@ namespace municipalities_report
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
