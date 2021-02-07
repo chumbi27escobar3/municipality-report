@@ -56,12 +56,38 @@ namespace municipalities_report
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            getMunicipalityType();
         }
 
         private void data_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void getMunicipalityType(){
+            int cM = 0, cI=0, cA=0;
+            foreach (ListViewItem item in data.Items)
+            {
+                label1.Text = item.SubItems[4].Text;
+            }
+            for (int i = 0; i < data.Items.Count; i++)
+            {
+                var colCount = data.Items[1].SubItems[4].Text;
+                label1.Text = Convert.ToString(colCount);
+                if (data.Items[i].SubItems[4].Text.Equals("Municipio"))
+                {
+                    cM++;
+                }if (data.Items[i].SubItems[4].Text.Equals("Isla"))
+                {
+                    cI++;
+                }if (data.Items[i].SubItems[4].Text.Equals("Área no municipalizada"))
+                {
+                    cA++;
+                }
+            }
+            chart1.Series["Series1"].Points.AddXY("Municipio", cM);
+            chart1.Series["Series1"].Points.AddXY("Isla", cI);
+            chart1.Series["Series1"].Points.AddXY("Área no municipalizada", cA);
         }
     }
 }
