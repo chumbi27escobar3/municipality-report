@@ -91,11 +91,18 @@ namespace municipalities_report
 
         private void getDepartament()
         {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string selected = this.alphabet.GetItemText(this.alphabet.SelectedItem);
             for (int i = 0; i < data.Items.Count; i++)
             {
                 var colCount = data.Items[1].SubItems[2].Text;
-                if (data.Items[i].SubItems[2].Text.Equals("Municipio"))
+                if (data.Items[i].SubItems[2].Text.Equals(selected))
                 {
+
                 }
                 if (data.Items[i].SubItems[2].Text.Equals("Isla"))
                 {
@@ -104,11 +111,6 @@ namespace municipalities_report
                 {
                 }
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string selected = this.alphabet.GetItemText(this.alphabet.SelectedItem);
         }
     }
 }
